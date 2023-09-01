@@ -1,0 +1,21 @@
+@use 'base/mixins';
+
+.barra {
+  display: flex;
+  flex-direction: column;
+  @include mixins.desktop {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    width: 50%;
+    margin: 0 auto;
+
+    @include mixins.desktop {
+      width: 20rem;
+      margin: 0;
+    }
+  }
+}

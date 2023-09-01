@@ -1,0 +1,30 @@
+@use 'base/variables';
+@use 'base/mixins';
+
+.contenido-nosotros {
+  @include mixins.desktop {
+    @include mixins.gridColumn(2, 2rem);
+  }
+  .imagen {
+    margin-bottom: variables.$separacion;
+    @include mixins.desktop {
+      margin-right: 2rem;
+      margin-bottom: 0;
+    }
+
+    img {
+      margin: 0 auto;
+      transform: rotate(-6deg);
+      border: 3rem solid variables.$blanco;
+      box-shadow: 9px 10px 5px -7px rgb(0 0 0 / 0.35);
+    }
+  }
+  .texto {
+    blockquote {
+      margin: 0;
+      padding: 1rem;
+      border-left: 0.5rem solid variables.$primario;
+      font-size: 2rem;
+    }
+  }
+}

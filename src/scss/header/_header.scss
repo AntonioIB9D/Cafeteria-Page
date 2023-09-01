@@ -1,0 +1,67 @@
+@use 'base/variables';
+@use 'base/mixins';
+
+.header {
+  padding: 5rem 0;
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @include mixins.desktop {
+    min-height: 70rem;
+  }
+
+  &::before {
+    content: '';
+    background-color: variables.$negro;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.6;
+  }
+
+  .contenido-header {
+    position: relative;
+  }
+
+  .texto-header {
+    h1 {
+      text-align: center;
+      color: variables.$blanco;
+      text-transform: uppercase;
+      position: relative;
+      margin-top: 5rem;
+
+      @include mixins.desktop {
+        margin-top: 10rem;
+      }
+    }
+  }
+}
+
+//Header de cada pagina
+.header-inicio {
+  background-image: url(/build/img/header_inicio.webp);
+}
+
+.header-nosotros {
+  background-image: url(/build/img/header_nosotros.webp);
+}
+
+.header-proceso {
+  background-image: url(/build/img/header_proceso.webp);
+}
+
+.header-menu {
+  background-image: url(/build/img/header_menu.webp);
+}
+
+.header-galeria {
+  background-image: url(/build/img/header_galeria.webp);
+}
+
+.header-contacto {
+  background-image: url(/build/img/header_contacto.webp);
+}

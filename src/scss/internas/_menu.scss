@@ -1,0 +1,30 @@
+@use 'base/variables';
+@use 'base/mixins';
+
+.contenido-menu {
+  background-image: url(/build/img/cafe.webp);
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: 100%;
+  aspect-ratio: 3 / 9; /*Pixeles verticales y horizontales */
+
+  @include mixins.tablet {
+    aspect-ratio: 8/6;
+    background-size: 45%;
+    background-position: bottom center;
+  }
+
+  @include mixins.desktop {
+    @include mixins.gridColumn(2, variables.$separacion);
+    aspect-ratio: 16/6;
+    background-size: 40%;
+    background-position: bottom right;
+  }
+
+  .texto {
+    p {
+      font-size: 2rem;
+      margin: 0;
+    }
+  }
+}

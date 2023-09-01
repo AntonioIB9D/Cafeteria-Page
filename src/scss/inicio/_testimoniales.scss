@@ -1,0 +1,26 @@
+@use 'base/variables';
+@use 'base/mixins';
+
+.nuestros-testimoniales {
+  padding: 10rem 2rem;
+  background-color: variables.$blanco;
+  position: relative;
+  @include mixins.desktop {
+    padding: 10rem;
+  }
+  .testimonial {
+    background-color: variables.$cafeClaro;
+    padding: 2rem 4rem;
+    margin: 0 auto;
+    border-radius: 1rem;
+    @include mixins.desktop {
+      width: 50%;
+    }
+    .autor {
+      display: flex;
+      flex-direction: row-reverse;
+      color: variables.$primario;
+      font-weight: 600;
+    }
+  }
+}

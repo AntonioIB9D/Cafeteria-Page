@@ -1,0 +1,13 @@
+@use 'base/variables';
+@use 'base/mixins';
+
+.contenido-principal {
+  background-color: variables.$blanco;
+  padding: 5rem 2rem;
+
+  @include mixins.desktop {
+    padding: 10rem;
+    margin-top: -10rem;
+    position: relative;
+  }
+}

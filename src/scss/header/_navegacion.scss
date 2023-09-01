@@ -1,0 +1,35 @@
+@use 'base/variables';
+@use 'base/mixins';
+/* @use 'sass:math'; */
+/*math.div(variables.$separacion, 4) */
+
+.nav-principal {
+  display: flex;
+  flex-direction: column;
+  margin-top: 5rem;
+  @include mixins.desktop {
+    flex-direction: row;
+    gap: 1rem;
+    margin-top: 0;
+  }
+
+  a {
+    text-align: center;
+    color: variables.$blanco;
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    transition: color 0.3s;
+    @include mixins.desktop {
+      margin-bottom: 0;
+    }
+    &:hover {
+      color: variables.$secundario;
+    }
+
+    &.activo {
+      color: variables.$secundario;
+    }
+  }
+}
