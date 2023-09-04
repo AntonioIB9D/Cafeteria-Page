@@ -9,6 +9,12 @@ Página web de una cafetería ✨
 
 ---
 
+Instalar modulos de node ⬇️ :
+
+```
+npm install
+```
+
 Utilizar Live Server ⚙️ 
 
 ---
